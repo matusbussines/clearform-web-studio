@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MessageCircle, Zap, Monitor, Layout, Settings } from 'lucide-react';
+import { MessageCircle, Zap, Monitor, Layout } from 'lucide-react';
 
-const icons = [MessageCircle, Zap, Monitor, Layout, Settings];
+const icons = [MessageCircle, Zap, Monitor, Layout];
 
 const WhyUsSection = () => {
   const { t } = useLanguage();
@@ -18,8 +18,8 @@ const WhyUsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {t.whyUs.benefits.map((benefit, index) => {
               const Icon = icons[index];
               return (
