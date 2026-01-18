@@ -100,6 +100,11 @@ export const translations = {
     footer: {
       rights: 'Všetky práva vyhradené.',
     },
+    cookies: {
+      text: 'Táto webová stránka používa cookies na zabezpečenie správneho fungovania a na zlepšenie používateľského zážitku. Nepoužívame marketingové cookies.',
+      accept: 'Súhlasím',
+      reject: 'Odmietnuť',
+    },
   },
   en: {
     nav: {
@@ -199,6 +204,11 @@ export const translations = {
     },
     footer: {
       rights: 'All rights reserved.',
+    },
+    cookies: {
+      text: 'This website uses cookies to ensure proper functionality and improve user experience. We do not use marketing cookies.',
+      accept: 'Accept',
+      reject: 'Reject',
     },
   },
 };
