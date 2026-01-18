@@ -81,10 +81,6 @@ export const translations = {
           title: 'Jednoduchá štruktúra',
           description: 'Prehľadné usporiadanie obsahu, v ktorom sa návštevníci ľahko zorientujú.',
         },
-        {
-          title: 'Ľahká správa',
-          description: 'Stránku budete môcť jednoducho aktualizovať aj bez technických znalostí.',
-        },
       ],
     },
     contact: {
@@ -184,10 +180,6 @@ export const translations = {
         {
           title: 'Simple structure',
           description: 'Clear content organization that visitors can easily navigate.',
-        },
-        {
-          title: 'Easy management',
-          description: 'You can easily update the site even without technical knowledge.',
         },
       ],
     },

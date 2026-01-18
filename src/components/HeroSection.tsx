@@ -6,17 +6,29 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Mesh Gradient Background */}
-      <div className="absolute inset-0 bg-mesh" />
-      
-      {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-grid" />
-      
-      {/* Floating Shapes */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-accent/5 blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 rounded-full bg-accent/3 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-accent/5 to-transparent blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background">
+      {/* Geometric Shapes Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large circle top right */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-foreground/5" />
+        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-secondary/60" />
+        
+        {/* Floating squares */}
+        <div className="absolute top-1/4 left-[10%] w-24 h-24 rounded-2xl bg-secondary/80 rotate-12" />
+        <div className="absolute top-1/3 left-[15%] w-16 h-16 rounded-xl border border-foreground/5 rotate-45" />
+        
+        {/* Bottom left shapes */}
+        <div className="absolute bottom-20 left-[5%] w-40 h-40 rounded-full border border-foreground/5" />
+        <div className="absolute bottom-32 left-[8%] w-20 h-20 rounded-full bg-secondary/70" />
+        
+        {/* Right side shapes */}
+        <div className="absolute top-1/2 right-[8%] w-32 h-32 rounded-2xl bg-secondary/50 -rotate-12" />
+        <div className="absolute top-[60%] right-[12%] w-12 h-12 rounded-lg border border-foreground/5 rotate-6" />
+        
+        {/* Center decorative lines */}
+        <div className="absolute top-[20%] left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-foreground/10 to-transparent" />
+        <div className="absolute bottom-[25%] left-1/3 w-px h-24 bg-gradient-to-b from-transparent via-foreground/5 to-transparent" />
+      </div>
 
       <div className="container relative z-10 px-6">
         <div className="max-w-3xl mx-auto text-center">
