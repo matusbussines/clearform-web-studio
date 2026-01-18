@@ -8,6 +8,7 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 
 const LandingPage = () => {
   const { lang } = useParams<{ lang: string }>();
@@ -31,6 +32,7 @@ const LandingPage = () => {
           <ContactSection />
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </LanguageProvider>
   );
