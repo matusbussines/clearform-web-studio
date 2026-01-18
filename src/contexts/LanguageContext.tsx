@@ -1,5 +1,5 @@
 import React, { createContext, useContext, ReactNode } from 'react';
-import { Language, getTranslation } from '@/lib/translations';
+import { Language, getTranslation, translations } from '@/lib/translations';
 
 type TranslationType = ReturnType<typeof getTranslation>;
 
@@ -8,7 +8,13 @@ interface LanguageContextType {
   t: TranslationType;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+// Provide default Slovak translations as fallback
+const defaultContext: LanguageContextType = {
+  language: 'sk',
+  t: translations.sk,
+};
+
+const LanguageContext = createContext<LanguageContextType>(defaultContext);
 
 interface LanguageProviderProps {
   language: Language;
@@ -26,9 +32,5 @@ export const LanguageProvider = ({ language, children }: LanguageProviderProps) 
 };
 
 export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
+  return useContext(LanguageContext);
 };
