@@ -4,79 +4,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ClearForm Design System - Clean, Professional, Modern */
+/* ClearForm Design System - Warm, Modern, Inviting */
 
 @layer base {
   :root {
-    /* Core colors - Navy & Teal palette */
-    --background: 210 20% 99%;
-    --foreground: 222 47% 11%;
+    /* Core colors - Warm Slate & Coral palette */
+    --background: 40 20% 99%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 20% 10%;
 
-    /* Primary - Deep Navy */
-    --primary: 222 47% 20%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Charcoal */
+    --primary: 220 15% 15%;
+    --primary-foreground: 40 20% 98%;
 
-    /* Secondary - Light Gray */
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 222 47% 20%;
+    /* Secondary - Warm Gray */
+    --secondary: 40 15% 95%;
+    --secondary-foreground: 220 15% 15%;
 
-    /* Accent - Warm Teal */
-    --accent: 168 76% 36%;
+    /* Accent - Warm Coral/Terracotta */
+    --accent: 15 80% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 40 10% 94%;
+    --muted-foreground: 220 10% 45%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 168 76% 36%;
+    --border: 40 15% 90%;
+    --input: 40 15% 90%;
+    --ring: 15 80% 55%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 20%) 0%, hsl(210 50% 30%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(222 47% 11% / 0.1);
-    --shadow-card: 0 8px 30px -10px hsl(222 47% 11% / 0.12);
-    --shadow-elevated: 0 20px 50px -15px hsl(222 47% 11% / 0.2);
+    --gradient-hero: linear-gradient(135deg, hsl(15 80% 55%) 0%, hsl(35 90% 60%) 100%);
+    --gradient-mesh-1: hsl(15 80% 55% / 0.08);
+    --gradient-mesh-2: hsl(35 90% 60% / 0.06);
+    --gradient-mesh-3: hsl(200 60% 70% / 0.05);
+    --shadow-soft: 0 4px 20px -4px hsl(220 20% 10% / 0.08);
+    --shadow-card: 0 8px 30px -10px hsl(220 20% 10% / 0.1);
+    --shadow-elevated: 0 20px 50px -15px hsl(15 80% 55% / 0.15);
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 8%;
+    --foreground: 40 20% 98%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 11%;
+    --card-foreground: 40 20% 98%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 11%;
+    --popover-foreground: 40 20% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 40 20% 98%;
+    --primary-foreground: 220 20% 10%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 17%;
+    --secondary-foreground: 40 20% 98%;
 
-    --accent: 168 76% 42%;
+    --accent: 15 80% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 15% 17%;
+    --muted-foreground: 40 10% 65%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 168 76% 42%;
+    --border: 220 15% 17%;
+    --input: 220 15% 17%;
+    --ring: 15 80% 60%;
   }
 }
 
@@ -111,5 +114,18 @@
 
   .shadow-elevated {
     box-shadow: var(--shadow-elevated);
+  }
+
+  .bg-mesh {
+    background-image: 
+      radial-gradient(ellipse 80% 50% at 20% 40%, var(--gradient-mesh-1), transparent),
+      radial-gradient(ellipse 60% 80% at 80% 20%, var(--gradient-mesh-2), transparent),
+      radial-gradient(ellipse 50% 50% at 60% 80%, var(--gradient-mesh-3), transparent);
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(hsl(var(--foreground) / 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, hsl(var(--foreground) / 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 }

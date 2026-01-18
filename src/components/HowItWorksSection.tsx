@@ -4,8 +4,11 @@ const HowItWorksSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="how-it-works" className="py-24 md:py-32 bg-secondary/30">
-      <div className="container px-6">
+    <section id="how-it-works" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-secondary/20" />
+      
+      <div className="container px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t.howItWorks.title}
@@ -25,7 +28,7 @@ const HowItWorksSection = () => {
                 )}
 
                 <div className="relative flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center text-lg font-bold mb-4 shadow-soft relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/80 text-accent-foreground flex items-center justify-center text-lg font-bold mb-4 shadow-elevated relative z-10">
                     {step.number}
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">
